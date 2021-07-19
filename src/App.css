@@ -1,38 +1,194 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-image: url('/src/images/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+    padding: 15px 0px;
+    width: 85%;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    color: rgb(255, 255, 255);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo-form {
+    display: flex;
+    width: 85%;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input {
+    border: none;
+    width: 80%;
+    padding: 7px 25px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    border-right: none;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-input:focus {
+    outline: none;
+}
+
+.todo-btn {
+    border: none;
+    /* padding: 0px 7px; */
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 0px 5px 5px 0px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    border-left: none;
+    color: white;
+    font-size: larger;
+    width: 15%;
+}
+
+.todo-btn:hover {
+    color: rgb(16, 243, 35);
+}
+
+.select {
+    appearance: none;
+    background: none;
+    outline: none;
+    width: 15%;
+}
+
+.filter-todo {
+    padding: 6px 0px;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    color: white;
+    width: 100%;
+}
+
+.filter-todo:active {
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.323);
+}
+
+.filter-todo:focus {
+    outline: none;
+}
+
+option {
+    background-color: rgba(220, 19, 220, 0);
+    color: black;
+}
+
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    width: 84%;
+    margin-top: 25px;
+}
+
+.todo {
+    display: flex;
+    margin-top: 10px;
+    padding: 7px 0px;
+    justify-content: space-between;
+    background: rgba( 255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 5px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    color: white;
+    list-style: none;
+    width: 100%;
+    align-items: center;
+}
+
+.todo-item {
+    margin-left: 20px;
+}
+
+.completed {
+    color: gray;
+}
+
+.complete-btn, .trash-btn {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0px 7px;
+    font-size: large;
+}
+
+.complete-btn:focus, .trash-btn:focus {
+    outline: none;
+}
+
+.complete-btn:active {
+    color: rgb(109, 245, 56);
+}
+
+.trash-btn:active {
+    color: rgb(146, 11, 11);
+}
+
+.trash-btn:hover {
+    color: rgb(213, 29, 29);
+}
+
+.complete-btn:hover {
+    color: rgb(22, 216, 22);
+}
+
+.buttons {
+    display: flex;
+}
+
+input::placeholder {
+    color: rgb(248, 248, 248);
 }

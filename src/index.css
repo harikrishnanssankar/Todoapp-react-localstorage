@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: blueviolet;
+}
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.counter-elements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-list {
+  display: flex;
+  align-items:center ;
+  justify-content: space-between;
+}
